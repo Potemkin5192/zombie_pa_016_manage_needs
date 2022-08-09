@@ -2422,6 +2422,27 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			toilet.clickable = true;
 			shower.clickable = true;
 			catScr.clickable = true;
+			bed.button.addEventListener('click', bedBtnClick);
+		}
+		function bedBtnClick() {
+			bed.play();
+			createjs.Tween.get(main.hand).to({
+				alpha: 0,
+				visible: false
+			}, 220);
+			var StartY = bed.button.y;
+			createjs.Tween.get(bed.button).to({
+				y: tv.button.y + 15
+			}, 100, createjs.Ease.quadIn).to({
+				y: StartY
+			}, 150, createjs.Ease.quadOut).to({
+				alpha: 0,
+				visible: false
+			}, 250, createjs.Ease.cubicIn);
+			increaseComfort();
+			playMoney();
+			counter++;
+			checkCounter();
 		}
 		tv.addEventListener('click', tvClick);
 		function tvClick() {
@@ -2460,6 +2481,7 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			increaseJoy();
 			playMoney();
 			counter++;
+			checkCounter();
 		}
 		sofa.addEventListener('click', sofaClick);
 		function sofaClick() {
@@ -2494,6 +2516,7 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			increaseComfort();
 			playMoney();
 			counter++;
+			checkCounter();
 		}
 		table.addEventListener('click', tableClick);
 		function tableClick() {
@@ -2528,6 +2551,7 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			increaseComfort();
 			playMoney();
 			counter++;
+			checkCounter();
 		}
 		toilet.addEventListener('click', toiletClick);
 		function toiletClick() {
@@ -2562,6 +2586,7 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			increaseHyhyene();
 			playMoney();
 			counter++;
+			checkCounter();
 		}
 		shower.addEventListener('click', showerClick);
 		function showerClick() {
@@ -2596,6 +2621,7 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			increaseHyhyene();
 			playMoney();
 			counter++;
+			checkCounter();
 		}
 		catScr.addEventListener('click', catScrClick);
 		function catScrClick() {
@@ -2630,6 +2656,7 @@ p.nominalBounds = new cjs.Rectangle(49.2,-35.5,308.5,69.3);
 			increaseJoy();
 			playMoney();
 			counter++;
+			checkCounter();
 		}
 		function increaseJoy() {
 			if (joy.currentFrame <= 1) {
@@ -2776,8 +2803,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_.png?1660056883907", id:"index_atlas_P_"},
-		{src:"index_atlas_NP_.jpg?1660056883907", id:"index_atlas_NP_"}
+		{src:"index_atlas_P_.png?1660057560119", id:"index_atlas_P_"},
+		{src:"index_atlas_NP_.jpg?1660057560119", id:"index_atlas_NP_"}
 	],
 	preloads: []
 };
