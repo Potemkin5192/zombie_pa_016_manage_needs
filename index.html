@@ -1968,9 +1968,6 @@ p.nominalBounds = new cjs.Rectangle(-130.7,-299.1,261.5,605.3);
 (lib.UI = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
 	// timeline functions:
-	this.frame_34 = function() {
-		window.dispatchEvent(new Event('connect'));
-	}
 	this.frame_59 = function() {
 		window.dispatchEvent(new Event('connect'));
 	}
@@ -1993,7 +1990,7 @@ p.nominalBounds = new cjs.Rectangle(-130.7,-299.1,261.5,605.3);
 		});
 	}
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(34).call(this.frame_34).wait(25).call(this.frame_59).wait(65).call(this.frame_124).wait(26).call(this.frame_150).wait(27).call(this.frame_177).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).wait(59).call(this.frame_59).wait(65).call(this.frame_124).wait(26).call(this.frame_150).wait(27).call(this.frame_177).wait(1));
 	// go_png
 	this.go = new lib.go_btn();
 	this.go.name = "go";
@@ -2803,8 +2800,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_.png?1660057560119", id:"index_atlas_P_"},
-		{src:"index_atlas_NP_.jpg?1660057560119", id:"index_atlas_NP_"}
+		{src:"index_atlas_P_.png?1660057876865", id:"index_atlas_P_"},
+		{src:"index_atlas_NP_.jpg?1660057876865", id:"index_atlas_NP_"}
 	],
 	preloads: []
 };
