@@ -1254,7 +1254,7 @@ p.nominalBounds = new cjs.Rectangle(-82.4,-76.9,164.8,153.9);
 	this.button = new lib.uopgrade_btn();
 	this.button.name = "button";
 	this.button.parent = this;
-	this.button.setTransform(-68.7,-49.3,0.804,0.804);
+	this.button.setTransform(6.7,-49.3,0.804,0.804);
 	this.timeline.addTween(cjs.Tween.get(this.button).to({_off:true},1).wait(21));
 	// hitArea
 	this.instance = new lib.tableHitArea();
@@ -1376,6 +1376,7 @@ p.nominalBounds = new cjs.Rectangle(-89,-114,177.6,227.6);
 	}
 	this.frame_63 = function() {
 		this.stop();
+		window.dispatchEvent(new Event('checkCounter'));
 	}
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(15).call(this.frame_15).wait(16).call(this.frame_31).wait(16).call(this.frame_47).wait(16).call(this.frame_63).wait(1));
@@ -1435,7 +1436,6 @@ p.nominalBounds = new cjs.Rectangle(-98,-35,169.9,70.2);
 	}
 	this.frame_29 = function() {
 		this.stop();
-		window.dispatchEvent(new Event('checkCounter'));
 	}
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(29).call(this.frame_29).wait(1));
@@ -1610,7 +1610,6 @@ p.nominalBounds = new cjs.Rectangle(-132.5,-73.5,265,147);
 	}
 	this.frame_29 = function() {
 		this.stop();
-		window.dispatchEvent(new Event('checkCounter'));
 	}
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(29).call(this.frame_29).wait(1));
@@ -1750,11 +1749,9 @@ p.nominalBounds = new cjs.Rectangle(-168.6,-37.7,337.3,75.7);
 	}
 	this.frame_29 = function() {
 		this.stop();
-		window.dispatchEvent(new Event('checkCounter'));
 	}
 	this.frame_58 = function() {
 		this.stop();
-		window.dispatchEvent(new Event('checkCounter'));
 	}
 	// actions tween:
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(29).call(this.frame_29).wait(29).call(this.frame_58).wait(1));
@@ -2850,10 +2847,10 @@ p.nominalBounds = new cjs.Rectangle(-1821.4,-1504.1,3642.9,3008.2);
 		}
 		window.addEventListener('checkCounter',checkCounter);
 		function checkCounter() {
-			if (counter >= 4 && comfort.currentFrame >= 50 && hyhyene.currentFrame >= 15 && joy.currentFrame >= 15) {
+			if (counter >= 4 && comfort.currentFrame >= 40 && hyhyene.currentFrame >= 14 && joy.currentFrame >= 14) {
 				goodEnd();
 			}
-			if (counter >= 4 && (comfort.currentFrame <= 30 || hyhyene.currentFrame <= 15 || joy.currentFrame <= 15)) {
+			if ((counter >= 4 && comfort.currentFrame < 35) || (counter >= 4 && hyhyene.currentFrame < 15) || (counter >= 4 && joy.currentFrame < 15)) {
 				badEnd();
 			}
 		}
@@ -2977,8 +2974,8 @@ lib.properties = {
 	color: "#FFFFFF",
 	opacity: 1.00,
 	manifest: [
-		{src:"index_atlas_P_.png?1660120261521", id:"index_atlas_P_"},
-		{src:"index_atlas_NP_.jpg?1660120261521", id:"index_atlas_NP_"}
+		{src:"index_atlas_P_.png?1660122437426", id:"index_atlas_P_"},
+		{src:"index_atlas_NP_.jpg?1660122437426", id:"index_atlas_NP_"}
 	],
 	preloads: []
 };
